@@ -1,0 +1,443 @@
+<!--
+  ============================================================
+  راهنمای تعاملی برد سنسور Zero P2
+  ساخته‌شده توسط اینتل‌سافت | https://intellsoft.ir
+  ============================================================
+  SEO Metadata (برای استفاده در <head> صفحه)
+  ------------------------------------------------------------
+  <title>راهنمای تعاملی چشمی دزدگیر اماکن Zero Z2 | سنسور P2 | اینتل‌سافت</title>
+  <meta name="description" content="راهنمای تعاملی و تصویری برد سنسور P2 دزدگیر اماکن Zero Z2. با کلیک روی هر بخش، توضیحات کامل ترمینال‌ها، سنسور PIR، LED، کلید تامپر و مشخصات فنی را ببینید. ساخته‌شده توسط اینتل‌سافت (intellsoft.ir).">
+  <meta name="keywords" content="چشمی دزدگیر اماکن, Zero Z2, سنسور P2, دزدگیر زیرو, سنسور حرکتی PIR, ترمینال دزدگیر, کلید تامپر, اینتل‌سافت, intellsoft">
+  <meta property="og:title" content="راهنمای تعاملی چشمی دزدگیر اماکن Zero Z2 | سنسور P2">
+  <meta property="og:description" content="راهنمای تعاملی برد سنسور P2 دزدگیر Zero Z2. مشخصات فنی، نحوهٔ سیم‌کشی و عملکرد اجزا. ساخته‌شده توسط اینتل‌سافت.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://intellsoft.ir/zero-p2-guide">
+  <meta property="og:locale" content="fa_IR">
+  <link rel="canonical" href="https://intellsoft.ir/zero-p2-guide">
+-->
+
+<div class="zp2-wrap" dir="rtl">
+  <div class="zp2-header">
+    <h1>راهنمای تعاملی برد سنسور Zero P2</h1>
+    <p>موس را روی هر بخش از برد ببرید تا توضیح کوتاه آن را ببینید، و با کلیک یا لمس، توضیحات کامل و تنظیمات آن بخش را در پنل کنار مشاهده کنید.</p>
+  </div>
+
+  <div class="zp2-main">
+    <div class="zp2-board-box">
+      <svg id="zp2-svg" viewBox="0 0 750 830" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="برد سنسور Zero P2 دزدگیر اماکن Z2">
+        <defs>
+          <filter id="zp2-shadow" x="-5%" y="-5%" width="110%" height="110%">
+            <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+          </filter>
+          <radialGradient id="zp2-pirG" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="#e0e0e0" stop-opacity="1"/>
+            <stop offset="70%" stop-color="#a0a0a0" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#606060" stop-opacity="1"/>
+          </radialGradient>
+        </defs>
+
+        <!-- ===== WHITE HOUSING ===== -->
+        <path d="M 80 20 L 670 20 Q 710 20 710 60 L 710 780 Q 710 810 670 810 L 80 810 Q 40 810 40 780 L 40 60 Q 40 20 80 20 Z"
+              fill="#f4f6f8" stroke="#d0d5da" stroke-width="2"/>
+
+        <!-- Housing details -->
+        <rect x="330" y="30" width="90" height="20" fill="#e0e4e8" rx="4"/>
+        <rect x="330" y="780" width="90" height="20" fill="#e0e4e8" rx="4"/>
+        <circle cx="375" cy="780" r="5" fill="#fff" stroke="#ccc" stroke-width="2"/>
+
+        <!-- ===== BLACK PCB ===== -->
+        <rect x="130" y="70" width="490" height="680" rx="12" fill="#1a1a1a" stroke="#000" stroke-width="2" filter="url(#zp2-shadow)"/>
+
+        <!-- PCB Traces (Decorative) -->
+        <g stroke="#333" stroke-width="1.5" fill="none" opacity="0.6">
+          <path d="M 160 250 L 200 250 L 220 270 L 280 270"/>
+          <path d="M 580 300 L 540 300 L 520 320 L 480 320"/>
+          <path d="M 160 400 L 200 400 L 220 420 L 280 420"/>
+          <path d="M 580 450 L 540 450 L 520 470 L 480 470"/>
+          <path d="M 350 200 L 350 150 L 400 150"/>
+        </g>
+
+        <!-- PCB Silk labels (Left Edge) -->
+        <g font-size="11" fill="#fff" font-family="monospace" font-weight="bold">
+          <text x="150" y="420" transform="rotate(-90 150 420)">ZeroAlarmSystem</text>
+        </g>
+
+        <!-- SMD Components (Decorative to match photo) -->
+        <g fill="#222" stroke="#444" stroke-width="0.5">
+          <rect x="180" y="120" width="20" height="10"/> <text x="205" y="128" font-size="6" fill="#888" font-family="monospace">R8</text>
+          <rect x="220" y="130" width="20" height="10"/> <text x="245" y="138" font-size="6" fill="#888" font-family="monospace">R9</text>
+          <rect x="180" y="150" width="30" height="15"/> <text x="215" y="160" font-size="6" fill="#888" font-family="monospace">U3</text>
+          <rect x="180" y="180" width="20" height="10"/> <text x="205" y="188" font-size="6" fill="#888" font-family="monospace">R10</text>
+          
+          <rect x="480" y="110" width="10" height="20"/> <text x="475" y="125" font-size="6" fill="#888" font-family="monospace">C11</text>
+          <rect x="500" y="110" width="10" height="20"/> <text x="515" y="125" font-size="6" fill="#888" font-family="monospace">R1</text>
+          <rect x="460" y="140" width="20" height="10"/> <text x="485" y="148" font-size="6" fill="#888" font-family="monospace">R4</text>
+          <rect x="500" y="140" width="30" height="15"/> <text x="535" y="150" font-size="6" fill="#888" font-family="monospace">U2</text>
+
+          <rect x="180" y="300" width="40" height="60" rx="3" fill="#111" stroke="#333" stroke-width="1"/> <text x="200" y="330" font-size="8" fill="#fff" text-anchor="middle" font-family="monospace">P1</text>
+          <rect x="240" y="300" width="20" height="10"/> <text x="265" y="308" font-size="6" fill="#888" font-family="monospace">R15</text>
+          <rect x="240" y="330" width="20" height="10"/> <text x="265" y="338" font-size="6" fill="#888" font-family="monospace">R16</text>
+
+          <rect x="460" y="300" width="30" height="15"/> <text x="495" y="310" font-size="6" fill="#888" font-family="monospace">U1</text>
+          <rect x="440" y="330" width="20" height="10"/> <text x="465" y="338" font-size="6" fill="#888" font-family="monospace">CT2</text>
+          <rect x="460" y="350" width="20" height="10"/> <text x="485" y="358" font-size="6" fill="#888" font-family="monospace">C2</text>
+          <rect x="520" y="320" width="20" height="10"/> <text x="545" y="328" font-size="6" fill="#888" font-family="monospace">C15</text>
+        </g>
+
+        <!-- ===== OWL LOGO & P2 TEXT ===== -->
+        <g fill="#fff" opacity="0.95">
+          <path d="M 335 430 L 345 395 L 365 425 Z" />
+          <path d="M 415 430 L 405 395 L 385 425 Z" />
+          <path d="M 335 430 C 335 480, 355 490, 375 490 C 395 490, 415 480, 415 430 C 415 410, 395 405, 375 405 C 355 405, 335 410, 335 430 Z" />
+          <circle cx="355" cy="435" r="16" fill="#fff" />
+          <circle cx="395" cy="435" r="16" fill="#fff" />
+          <circle cx="355" cy="435" r="6" fill="#1a1a1a" />
+          <circle cx="395" cy="435" r="6" fill="#1a1a1a" />
+          <path d="M 370 448 L 380 448 L 375 458 Z" fill="#1a1a1a" />
+        </g>
+        <text x="375" y="482" font-size="26" fill="#fff" text-anchor="middle" font-family="monospace" font-weight="900">P2</text>
+
+        <!-- PCB mounting holes -->
+        <g fill="#0a0a0a" stroke="#444" stroke-width="1.5">
+          <circle cx="150" cy="90" r="8"/>
+          <circle cx="600" cy="90" r="8"/>
+          <circle cx="150" cy="730" r="8"/>
+          <circle cx="600" cy="730" r="8"/>
+          <circle cx="350" cy="100" r="10"/>
+          <circle cx="350" cy="700" r="10"/>
+        </g>
+
+        <!-- ===== PIR SENSOR ===== -->
+        <g class="zp2-hotspot" data-part="pir" tabindex="0" role="button" aria-label="سنسور PIR">
+          <circle cx="375" cy="230" r="75" fill="#555" stroke="#222" stroke-width="2"/>
+          <circle cx="375" cy="230" r="65" fill="url(#zp2-pirG)"/>
+          <circle cx="375" cy="230" r="40" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+          <rect x="360" y="215" width="30" height="30" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+          <text x="375" y="322" font-size="10" fill="#fff" text-anchor="middle" font-family="monospace" font-weight="bold">PIR</text>
+          <circle class="zp2-hl" cx="375" cy="230" r="75"/>
+        </g>
+
+        <!-- ===== LED INDICATOR (LD1) ===== -->
+        <g class="zp2-hotspot" data-part="led" tabindex="0" role="button" aria-label="LED نشانگر">
+          <rect x="365" y="570" width="20" height="30" rx="2" fill="#e0e0e0" stroke="#999" stroke-width="1"/>
+          <rect x="370" y="575" width="10" height="20" rx="1" fill="#f5a623"/>
+          <text x="375" y="618" font-size="9" fill="#fff" text-anchor="middle" font-family="monospace" font-weight="bold">LD1</text>
+          <circle class="zp2-hl" cx="375" cy="585" r="20"/>
+        </g>
+
+        <!-- ===== TAMPER SWITCH (SW1) ===== -->
+        <g class="zp2-hotspot" data-part="tamperSw" tabindex="0" role="button" aria-label="کلید تامپر (تشخیص باز شدن درب)">
+          <rect x="480" y="560" width="30" height="40" fill="#a0a0a0" stroke="#666" stroke-width="1.5"/>
+          <rect x="490" y="530" width="10" height="30" fill="#d0d0d0" stroke="#888" stroke-width="1"/>
+          <line x1="495" y1="520" x2="495" y2="530" stroke="#666" stroke-width="3"/>
+          <text x="495" y="540" font-size="9" fill="#fff" text-anchor="middle" font-family="monospace" font-weight="bold">SW1</text>
+          <rect class="zp2-hl" x="480" y="520" width="30" height="80" rx="3"/>
+        </g>
+
+        <!-- ===== ELECTROLYTIC CAPACITOR (C15) ===== -->
+        <g>
+          <ellipse cx="540" cy="430" rx="15" ry="6" fill="#a0a0a0"/>
+          <rect x="525" y="430" width="30" height="35" fill="#2a2a2a" stroke="#444" stroke-width="1"/>
+          <ellipse cx="540" cy="465" rx="15" ry="6" fill="#1a1a1a"/>
+          <text x="540" y="450" font-size="8" fill="#fff" text-anchor="middle" font-family="monospace">10V 25V</text>
+        </g>
+
+        <!-- ===== TERMINAL BLOCK ===== -->
+        <g class="zp2-hotspot" data-part="terminal" tabindex="0" role="button" aria-label="ترمینال‌های اتصال">
+          <rect x="150" y="640" width="120" height="50" rx="4" fill="#2d6b3a" stroke="#1a4a24" stroke-width="2"/>
+          <g fill="#d0d0d0" stroke="#666" stroke-width="1.5">
+            <circle cx="180" cy="665" r="15"/>
+            <circle cx="240" cy="665" r="15"/>
+          </g>
+          <g stroke="#555" stroke-width="1.8">
+            <line x1="169" y1="665" x2="191" y2="665"/>
+            <line x1="229" y1="665" x2="251" y2="665"/>
+          </g>
+          <text x="210" y="715" font-size="10" fill="#fff" text-anchor="middle" font-family="monospace" font-weight="bold">TAMPER</text>
+
+          <rect x="340" y="640" width="260" height="50" rx="4" fill="#2d6b3a" stroke="#1a4a24" stroke-width="2"/>
+          <rect x="460" y="640" width="4" height="50" fill="#1a4a24"/>
+          
+          <g fill="#d0d0d0" stroke="#666" stroke-width="1.5">
+            <circle cx="370" cy="665" r="15"/>
+            <circle cx="430" cy="665" r="15"/>
+            <circle cx="510" cy="665" r="15"/>
+            <circle cx="570" cy="665" r="15"/>
+          </g>
+          <g stroke="#555" stroke-width="1.8">
+            <line x1="359" y1="665" x2="381" y2="665"/>
+            <line x1="419" y1="665" x2="441" y2="665"/>
+            <line x1="499" y1="665" x2="521" y2="665"/>
+            <line x1="559" y1="665" x2="581" y2="665"/>
+          </g>
+          <text x="400" y="715" font-size="10" fill="#fff" text-anchor="middle" font-family="monospace" font-weight="bold">ZONE</text>
+          <text x="540" y="715" font-size="10" fill="#fff" text-anchor="middle" font-family="monospace" font-weight="bold">POWER</text>
+
+          <rect class="zp2-hl" x="150" y="640" width="450" height="50" rx="4"/>
+        </g>
+
+      </svg>
+    </div>
+
+    <aside class="zp2-panel" id="zp2-panel"></aside>
+  </div>
+
+  <!-- ===== بخش معرفی اینتل‌سافت ===== -->
+  <div class="zp2-brand" style="margin-top:22px;padding:16px 18px;background:#fff;border:1px solid #e2e8f0;border-radius:14px;box-shadow:0 4px 16px rgba(15,23,42,.06);">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:220px;">
+        <div style="font-size:14px;font-weight:800;color:#0f172a;margin-bottom:6px;">🛠️ ساخته‌شده توسط اینتل‌سافت</div>
+        <p style="margin:0 0 8px;font-size:13px;color:#475569;line-height:1.8;">
+          این ابزار تعاملی نمونه‌ای از ابزارهای آنلاین تخصصی است که توسط <b>اینتل‌سافت</b> برای تجهیزات امنیتی و صنعتی طراحی و توسعه داده می‌شود. 
+          اگر به دنبال ابزارهای مشابه، راهنمای تعاملی برای محصولات خود، یا توسعهٔ نرم‌افزارهای تخصصی هستید، با ما در ارتباط باشید.
+        </p>
+        <a href="https://intellsoft.ir" target="_blank" rel="noopener" style="display:inline-block;font-size:13px;font-weight:700;color:#2563eb;text-decoration:none;border-bottom:1px dashed #93c5fd;">
+          🌐 intellsoft.ir — ابزارهای آنلاین تخصصی و نرم‌افزارهای امنیتی
+        </a>
+      </div>
+      <div style="flex-shrink:0;text-align:center;">
+        <div style="font-size:11px;color:#94a3b8;margin-bottom:4px;">اینتل‌سافت</div>
+        <div style="font-size:22px;font-weight:900;color:#0f172a;letter-spacing:-1px;">IS</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zp2-tip" id="zp2-tip" aria-hidden="true"></div>
+</div>
+
+<!-- ===== داده‌های ساختاریافته (Schema.org) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "راهنمای تعاملی برد سنسور Zero P2",
+  "description": "راهنمای تعاملی و تصویری برد سنسور P2 دزدگیر اماکن Zero Z2. توضیحات ترمینال‌ها، سنسور PIR، LED نشانگر، کلید تامپر و مشخصات فنی.",
+  "url": "https://intellsoft.ir/zero-p2-guide",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "fa",
+  "author": {
+    "@type": "Organization",
+    "name": "اینتل‌سافت",
+    "url": "https://intellsoft.ir"
+  },
+  "about": {
+    "@type": "Product",
+    "name": "چشمی دزدگیر اماکن Zero Z2 - سنسور P2",
+    "description": "سنسور حرکتی PIR باسیم با برد ۱۶ متر، زاویه دید ۹۰ درجه، خروجی Tamper و بدنه ABS مقاوم، مناسب دزدگیر اماکن Zero Z2.",
+    "brand": { "@type": "Brand", "name": "Zero" },
+    "category": "SecurityAlarmSensor"
+  }
+}
+</script>
+
+<style>
+.zp2-wrap{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
+  background:#eef2f7;
+  border-radius:16px;
+  padding:22px;
+  color:#1e293b;
+  direction:rtl;
+  text-align:right;
+  box-sizing:border-box;
+  line-height:1.7;
+  margin-top:30px;
+}
+.zp2-wrap *,.zp2-wrap *::before,.zp2-wrap *::after{box-sizing:border-box}
+.zp2-header h1{margin:0 0 6px;font-size:20px;color:#0f172a;font-weight:800}
+.zp2-header p{margin:0 0 18px;font-size:13.5px;color:#64748b}
+.zp2-main{display:grid;grid-template-columns:1fr 380px;gap:18px;align-items:start}
+@media(max-width:900px){.zp2-main{grid-template-columns:1fr}}
+.zp2-board-box{
+  background:#fff;border:1px solid #e2e8f0;border-radius:14px;
+  padding:10px;box-shadow:0 4px 16px rgba(15,23,42,.06);
+}
+.zp2-board-box svg{display:block;width:100%;height:auto;user-select:none}
+.zp2-panel{
+  background:#fff;border:1px solid #e2e8f0;border-radius:14px;
+  padding:16px;box-shadow:0 4px 16px rgba(15,23,42,.06);min-height:260px;
+}
+.zp2-hotspot{cursor:pointer;outline:none}
+.zp2-hotspot .zp2-hl{fill:transparent;transition:fill .18s,stroke .18s;stroke:transparent;stroke-width:2;stroke-dasharray:5 4}
+.zp2-hotspot:hover .zp2-hl{fill:rgba(37,99,235,.15);stroke:#2563eb}
+.zp2-hotspot.zp2-active .zp2-hl{fill:rgba(37,99,235,.25);stroke:#2563eb}
+.zp2-hotspot:focus-visible .zp2-hl{stroke:#2563eb;fill:rgba(37,99,235,.18)}
+.zp2-tip{
+  position:fixed;z-index:99999;pointer-events:none;
+  background:#0f172a;color:#f8fafc;
+  padding:9px 13px;border-radius:9px;
+  font-size:13px;max-width:290px;line-height:1.6;
+  opacity:0;transform:translateY(4px);
+  transition:opacity .15s,transform .15s;
+  box-shadow:0 10px 28px rgba(0,0,0,.3);
+  font-family:inherit;
+}
+.zp2-tip.zp2-show{opacity:1;transform:translateY(0)}
+.zp2-tip b{display:block;font-size:12.5px;margin-bottom:3px;color:#93c5fd;font-weight:700}
+.zp2-empty{text-align:center;padding:36px 10px;color:#64748b}
+.zp2-empty-icon{font-size:34px;margin-bottom:10px}
+.zp2-empty-t{font-size:14px;font-weight:700;color:#334155;margin-bottom:5px}
+.zp2-empty-d{font-size:12.5px;color:#94a3b8}
+.zp2-p-head{border-bottom:1px solid #eef2f7;padding-bottom:10px;margin-bottom:12px}
+.zp2-p-tag{display:inline-block;font-size:11px;font-weight:700;color:#2563eb;background:#eff6ff;padding:2px 9px;border-radius:999px;margin-bottom:7px}
+.zp2-p-title{font-size:16px;font-weight:800;color:#0f172a}
+.zp2-p-body{font-size:13px;color:#475569;line-height:1.85}
+.zp2-p-body p{margin:0 0 9px}
+.zp2-p-body ul{margin:0 0 9px;padding-right:18px}
+.zp2-p-body li{margin-bottom:5px}
+.zp2-p-body b{color:#0f172a}
+.zp2-note{
+  background:#fffbeb;border-right:3px solid #f59e0b;
+  padding:8px 10px;border-radius:6px;font-size:12.5px;color:#92400e;margin-top:8px !important;
+}
+.zp2-spec{
+  background:#f0f9ff;border-right:3px solid #0ea5e9;
+  padding:8px 10px;border-radius:6px;font-size:12.5px;color:#075985;margin-top:8px !important;
+}
+</style>
+
+<script>
+(function(){
+  'use strict';
+  var root = document.querySelector('.zp2-wrap');
+  if(!root) return;
+
+  var svg = root.querySelector('#zp2-svg');
+  var panel = root.querySelector('#zp2-panel');
+  var tip = root.querySelector('#zp2-tip');
+  var currentKey = null;
+
+  var PARTS = {
+    terminal: {
+      tag: 'اتصال',
+      title: 'ترمینال‌های اتصال (۶ پیچه)',
+      short: 'TAMPER | ZONE | POWER',
+      body: '<p>بلوک ترمینال این سنسور شامل ۶ پیچه است که با فاصله منظم در پایین برد قرار گرفته‌اند:</p>' +
+            '<ul>' +
+            '<li><b>TAMPER (۲ پیچ چپ)</b> — خروجی کلید تامپر؛ در صورت باز شدن درب بدنه، کنتاکت باز می‌شود.</li>' +
+            '<li><b>ZONE (۲ پیچ وسط)</b> — خروجی رله آلارم؛ با تشخیص حرکت فعال می‌شود.</li>' +
+            '<li><b>POWER (۲ پیچ راست)</b> — ورودی تغذیه (منفی و مثبت ۱۲ ولت).</li>' +
+            '</ul>' +
+            '<p class="zp2-spec"><b>مشخصات فنی:</b> ولتاژ کاری ۹ تا ۱۶ ولت DC | جریان مصرفی حداکثر ۲۰ میلی‌آمپر | سازگار با پنل Zero Z2</p>'
+    },
+
+    pir: {
+      tag: 'حسگر',
+      title: 'سنسور PIR',
+      short: 'حسگر مادون قرمز دوگانه',
+      body: '<p>سنسور اصلی تشخیص حرکت این دستگاه از نوع مادون قرمز (PIR) است.</p>' +
+            '<ul>' +
+            '<li>برد تشخیص: ۱۶ متر</li>' +
+            '<li>زاویه پوشش: ۹۰ درجه</li>' +
+            '<li>ارتفاع نصب پیشنهادی: ۱٫۸ تا ۲٫۴ متر</li>' +
+            '<li>بدنه: ABS مقاوم</li>' +
+            '</ul>' +
+            '<p class="zp2-spec"><b>مشخصات:</b> قابلیت تنظیم حساسیت | تشخیص حرکات ظریف | فیلتر نویز دیجیتال | خروجی Tamper برای جلوگیری از دستکاری</p>'
+    },
+
+    led: {
+      tag: 'نشانگر',
+      title: 'LED نشانگر (LD1)',
+      short: 'نشانگر وضعیت سنسور',
+      body: '<p>این LED وضعیت سنسور را نشان می‌دهد و با هر تشخیص حرکت روشن می‌شود. برای تست و راه‌اندازی سنسور بسیار کاربردی است.</p>'
+    },
+
+    tamperSw: {
+      tag: 'حفاظت',
+      title: 'کلید تامپر (SW1)',
+      short: 'کلید فنری تشخیص باز شدن درب',
+      body: '<p>این کلید فنری روی برد قرار دارد و با بسته شدن درب چشمی فشرده می‌شود. اگر درب دستگاه باز شود، این کلید تغییر وضعیت داده و سیگنال هشدار از طریق ترمینال TAMPER به پنل ارسال می‌شود.</p>' +
+            '<p class="zp2-note">برای اتصال صحیح، دو سیم از پین‌های TAMPER باید به صورت سری با زون ۲۴ ساعته پنل قرار گیرند.</p>'
+    }
+  };
+
+  function qs(sel, ctx){ return (ctx || svg).querySelector(sel); }
+  function qsa(sel, ctx){ return Array.prototype.slice.call((ctx || svg).querySelectorAll(sel)); }
+
+  function renderPanel(key){
+    if(!key || !PARTS[key]){
+      panel.innerHTML =
+        '<div class="zp2-empty">' +
+          '<div class="zp2-empty-icon">👆</div>' +
+          '<div class="zp2-empty-t">برای شروع، روی یکی از اجزای برد کلیک کنید</div>' +
+          '<div class="zp2-empty-d">با بردن موس روی هر بخش، توضیح کوتاه آن نمایش داده می‌شود.</div>' +
+        '</div>';
+      return;
+    }
+
+    var p = PARTS[key];
+    var html = '<div class="zp2-p-head">' +
+                 '<div class="zp2-p-tag">' + (p.tag || 'جزء برد') + '</div>' +
+                 '<div class="zp2-p-title">' + p.title + '</div>' +
+               '</div>';
+
+    html += '<div class="zp2-p-body">' + p.body + '</div>';
+
+    panel.innerHTML = html;
+  }
+
+  function showTipAt(x, y, key){
+    var p = PARTS[key];
+    if(!p) return;
+    tip.innerHTML = '<b>' + p.title + '</b>' + (p.short || '');
+    tip.classList.add('zp2-show');
+
+    tip.style.left = '0px';
+    tip.style.top = '0px';
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = x + 16, top = y + 16;
+    if(left + w > window.innerWidth - 10) left = x - w - 16;
+    if(top + h > window.innerHeight - 10) top = y - h - 16;
+    if(left < 10) left = 10;
+    if(top < 10) top = 10;
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  }
+
+  function hideTip(){
+    tip.classList.remove('zp2-show');
+  }
+
+  function selectPart(key){
+    currentKey = key;
+    qsa('.zp2-hotspot').forEach(function(el){
+      el.classList.toggle('zp2-active', el.getAttribute('data-part') === key);
+    });
+    renderPanel(key);
+  }
+
+  qsa('.zp2-hotspot').forEach(function(el){
+    var key = el.getAttribute('data-part');
+
+    el.addEventListener('mouseenter', function(e){
+      showTipAt(e.clientX, e.clientY, key);
+    });
+    el.addEventListener('mousemove', function(e){
+      if(tip.classList.contains('zp2-show')) showTipAt(e.clientX, e.clientY, key);
+    });
+    el.addEventListener('mouseleave', hideTip);
+
+    el.addEventListener('click', function(){
+      selectPart(key);
+    });
+
+    el.addEventListener('touchstart', function(e){
+      var t = e.touches[0];
+      showTipAt(t.clientX, t.clientY, key);
+      selectPart(key);
+      clearTimeout(el._zp2Timer);
+      el._zp2Timer = setTimeout(hideTip, 2600);
+    }, { passive: true });
+
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        selectPart(key);
+      }
+    });
+  });
+
+  renderPanel(null);
+})();
+</script>
